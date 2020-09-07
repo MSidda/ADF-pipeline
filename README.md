@@ -1,1 +1,1 @@
-# Updating training
+# DevOps training 
