@@ -1,0 +1,39 @@
+{
+	"name": "Everymonth",
+	"properties": {
+		"description": "everymonth trigger",
+		"annotations": [
+			"everymonth"
+		],
+		"runtimeState": "Started",
+		"pipelines": [
+			{
+				"pipelineReference": {
+					"referenceName": "CopyPipeline",
+					"type": "PipelineReference"
+				}
+			}
+		],
+		"type": "ScheduleTrigger",
+		"typeProperties": {
+			"recurrence": {
+				"frequency": "Month",
+				"interval": 1,
+				"startTime": "2020-10-14T09:12:00Z",
+				"endTime": "2020-10-15T11:30:00Z",
+				"timeZone": "UTC",
+				"schedule": {
+					"minutes": [
+						30
+					],
+					"hours": [
+						10
+					],
+					"monthDays": [
+						31
+					]
+				}
+			}
+		}
+	}
+}

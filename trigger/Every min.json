@@ -1,0 +1,34 @@
+{
+	"name": "Every min",
+	"properties": {
+		"description": "trigger for 1 mins",
+		"annotations": [
+			"test-triggerforeverymin"
+		],
+		"runtimeState": "Started",
+		"pipelines": [
+			{
+				"pipelineReference": {
+					"referenceName": "CopyPipeline",
+					"type": "PipelineReference"
+				}
+			},
+			{
+				"pipelineReference": {
+					"referenceName": "secondpipeline",
+					"type": "PipelineReference"
+				}
+			}
+		],
+		"type": "ScheduleTrigger",
+		"typeProperties": {
+			"recurrence": {
+				"frequency": "Minute",
+				"interval": 1,
+				"startTime": "2020-10-14T11:15:00Z",
+				"endTime": "2020-10-15T11:30:00.415Z",
+				"timeZone": "UTC"
+			}
+		}
+	}
+}
